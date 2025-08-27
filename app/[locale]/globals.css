@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #f2f2f2;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+@layer base {
+  :root {
+    --color-1: 150 20% 90%;
+    --color-2: 210 30% 85%;
+    --color-3: 190 80% 35%;
+    --color-4: 280 60% 40%;
+    --color-5: 270 40% 25%;
+    --color-6: 0 0% 97%;
+    --color-7: 220 15% 10%;
+
+    --background: var(--color-6);
+    --foreground: var(--color-7);
+
+    --muted: var(--color-1);
+    --muted-foreground: 0 0% 40%;
+
+    --popover: var(--color-6);
+    --popover-foreground: var(--color-7);
+
+    --card: var(--color-6);
+    --card-foreground: var(--color-7);
+
+    --border: var(--color-1);
+    --input: var(--color-1);
+
+    --primary: var(--color-3);
+    --primary-foreground: var(--color-6);
+
+    --secondary: var(--color-2);
+    --secondary-foreground: var(--color-7);
+
+    --accent: var(--color-4);
+    --accent-foreground: var(--color-6);
+
+    --destructive: var(--color-4);
+    --destructive-foreground: var(--color-6);
+
+    --ring: var(--color-1);
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: var(--color-5);
+    --foreground: var(--color-6);
+
+    --muted: var(--color-4);
+    --muted-foreground: var(--color-6);
+
+    --popover: var(--color-5);
+    --popover-foreground: var(--color-6);
+
+    --card: var(--color-5);
+    --card-foreground: var(--color-6);
+
+    --border: var(--color-4);
+    --input: var(--color-4);
+
+    --primary: var(--color-3);
+    --primary-foreground: var(--color-6);
+
+    --secondary: var(--color-4);
+    --secondary-foreground: var(--color-6);
+
+    --accent: var(--color-2);
+    --accent-foreground: var(--color-7);
+
+    --destructive: var(--color-4);
+    --destructive-foreground: var(--color-6);
+
+    --ring: var(--color-4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
